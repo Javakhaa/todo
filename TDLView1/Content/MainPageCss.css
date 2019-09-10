@@ -1,0 +1,146 @@
+﻿body {
+    top: 0px;
+    left: 0px;
+    width: 1366px;
+    height: 768px;
+    background: #191D20 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.right {
+    top: 39px;
+    left: -1px;
+    width: 390px;
+    height: 690px;
+    background: #70423D 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.organizeLogo {
+    top: 83px;
+    left: 152px;
+    width: 149px;
+    height: 95px;
+    background: transparent url('/Img/logo1@2x.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.frame {
+    top: 84px;
+    left: 145px;
+    width: 1080px;
+    height: 600px;
+    background: transparent url('/Img/isai-ramos-_3SFFsWqCVg-unsplash.png') 0% 0% no-repeat padding-box;
+    box-shadow: 10px 10px 10px #131212;
+    opacity: 1;
+}
+.enterMail {
+    top: 647px;
+    left: 156px;
+    width: 233px;
+    height: 23px;
+    border: 1px solid #74433D;
+    opacity: 1;
+}
+
+.startButton {
+    top: 476px;
+    left: 436px;
+    width: 168px;
+    height: 30px;
+    background: #C49B05 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.startText {
+    top: 481px;
+    left: 445px;
+    width: 150px;
+    height: 20px;
+    text-align: left;
+    font: Light 18px/20px Gilroy;
+    letter-spacing: 0;
+    color: #F1F1F1;
+    opacity: 1;
+}
+.loginButton {
+    top: 476px;
+    left: 616px;
+    width: 76px;
+    height: 30px;
+    border: 1px solid #C49B05;
+    opacity: 1;
+}
+.loginText {
+    top: 482px;
+    left: 632px;
+    width: 44px;
+    height: 19px;
+    text-align: left;
+    font: Light 16px/19px Gilroy;
+    letter-spacing: 0;
+    color: #F1F1F1;
+    opacity: 1;
+}
+.description {
+    top: 331px;
+    left: 436px;
+    width: 497px;
+    height: 112px;
+    text-align: left;
+    font: Light 24px/28px Gilroy;
+    letter-spacing: 0;
+    color: #D8D7D6;
+    opacity: 0.8;
+}
+.headerText {
+    top: 257px;
+    left: 436px;
+    width: 479px;
+    height: 42px;
+    text-align: left;
+    font: Light 36px/42px Gilroy;
+    letter-spacing: 0;
+    color: #D8D7D6;
+    opacity: 1;
+}
+.slideFrame {
+    top: 365px;
+    left: 1175px;
+    width: 101px;
+    height: 39px;
+    border: 1px solid #B4B4B4;
+    opacity: 1;
+}
+.slideRight {
+    top: 374px;
+    left: 1241px;
+    width: 21px;
+    height: 21px;
+    transform: matrix(-1, -0.02, 0.02, -1, 0, 0);
+    background: transparent url('/Img/Right.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.slideLeft {
+    top: 374px;
+    left: 1191px;
+    width: 21px;
+    height: 21px;
+    background: transparent url('/Img/Left.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.googleIcon {
+    top: 647px;
+    left: 1033px;
+    width: 83px;
+    height: 24px;
+    background: #0F0F0F 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.appleIcon {
+    top: 647px;
+    left: 1127px;
+    width: 83px;
+    height: 23px;
+    background: #0F0F0F 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
