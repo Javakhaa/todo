@@ -45,7 +45,7 @@ namespace TDLView1
     #endregion
 		
 		public DbConnectionDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["TodoConnectionString"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["TodoConnectionString1"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -741,6 +741,8 @@ namespace TDLView1
 		
 		private string _PasswordHash;
 		
+		private System.DateTime _CreateDate;
+		
 		private EntitySet<Note> _Notes;
 		
 		private EntitySet<Project> _Projects;
@@ -761,6 +763,8 @@ namespace TDLView1
     partial void OnLastnameChanged();
     partial void OnPasswordHashChanging(string value);
     partial void OnPasswordHashChanged();
+    partial void OnCreateDateChanging(System.DateTime value);
+    partial void OnCreateDateChanged();
     #endregion
 		
 		public User()
@@ -867,6 +871,26 @@ namespace TDLView1
 					this._PasswordHash = value;
 					this.SendPropertyChanged("PasswordHash");
 					this.OnPasswordHashChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateDate", DbType="DateTime NOT NULL")]
+		public System.DateTime CreateDate
+		{
+			get
+			{
+				return this._CreateDate;
+			}
+			set
+			{
+				if ((this._CreateDate != value))
+				{
+					this.OnCreateDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreateDate = value;
+					this.SendPropertyChanged("CreateDate");
+					this.OnCreateDateChanged();
 				}
 			}
 		}

@@ -6,6 +6,7 @@
     background: #191D20 0% 0% no-repeat padding-box;
     opacity: 1;
 }
+
 .logo {
     top: -6px;
     left: 157px;
@@ -13,18 +14,23 @@
     height: 95px;
     background: transparent url('/Img/logo1@2x.png') 0% 0% no-repeat padding-box;
     opacity: 1;
-    position:absolute;
+    position: absolute;
 }
 
 .background {
-    top: 184px;
+    /*top: 184px;
     left: 183px;
     width: 1000px;
-    height: 400px;
+    height: 400px;*/
+    top: 19%;
+    width: 53%;
+    left: 9%;
+    height: 42%;
     background: #70423D 0% 0% no-repeat padding-box;
     box-shadow: 10px 10px 10px #000000D6;
     position: absolute;
 }
+
 .frame {
     top: 141px;
     left: 634px;
@@ -33,7 +39,11 @@
     border: 3px solid #AE9A5B;
     opacity: 1;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .email {
     top: 257px;
     left: 733px;
@@ -43,6 +53,7 @@
     opacity: 1;
     position: absolute;
 }
+
 .password {
     top: 345px;
     left: 733px;
@@ -53,6 +64,7 @@
     opacity: 1;
     position: absolute;
 }
+
 .signeup {
     top: 414px;
     left: 239px;
@@ -60,8 +72,9 @@
     height: 44px;
     border: 2px solid #AE9A5B;
     opacity: 1;
-    position:absolute;
+    position: absolute;
 }
+
 .signeuptext {
     top: 423px;
     left: 255px;
@@ -74,6 +87,7 @@
     opacity: 1;
     position: absolute;
 }
+
 .text1 {
     top: 334px;
     left: 238px;
@@ -84,8 +98,9 @@
     letter-spacing: 0;
     color: #D8D7D6;
     opacity: 0.8;
-    position:absolute;
+    position: absolute;
 }
+
 .text2 {
     top: 240px;
     left: 238px;
@@ -96,8 +111,9 @@
     letter-spacing: 0;
     color: #D8D7D6;
     opacity: 1;
-    position:absolute;
+    position: absolute;
 }
+
 .forgot {
     top: 472px;
     left: 813px;
@@ -108,8 +124,9 @@
     letter-spacing: 0;
     color: #91877C;
     opacity: 0.8;
-    position:absolute;
+    position: absolute;
 }
+
 .login {
     top: 457px;
     left: 951px;
@@ -117,8 +134,9 @@
     height: 44px;
     background: #C49B05 0% 0% no-repeat padding-box;
     opacity: 1;
-    position:absolute;
+    position: absolute;
 }
+
 .logintext1 {
     top: 466px;
     left: 975px;
@@ -129,5 +147,31 @@
     letter-spacing: 0;
     color: #F1F1F1;
     opacity: 1;
-    position:absolute;
+    position: absolute;
+}
+
+.login-form {
+    margin-left: 10%;
+    margin-right: 10%;
+    /*test*/
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+input:hover .login-form {
+    color: white;
+}
+
+.buttons {
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 60%;
+}
+
+.login-button-background {
+    background: #C49B05 0% 0% no-repeat padding-box;
+    border-radius: 0px;
+    color: white;
 }
