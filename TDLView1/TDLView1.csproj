@@ -95,6 +95,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\MainPageCss.css" />
     <Content Include="Content\OrganizeCss.css" />
+    <Content Include="Content\OrganizeToday.css" />
     <Content Include="Content\RegistrationCss.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\LoginCss.css" />
@@ -115,12 +116,12 @@
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
-    <Content Include="Views\Main\Index.cshtml" />
-    <Content Include="Views\Main\Organize.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Organize.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DbConnection.designer.cs">
       <AutoGen>True</AutoGen>
@@ -131,9 +132,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\AccountHelper.cs" />
+    <Compile Include="Models\AddTaskRequest.cs" />
     <Compile Include="Models\RegistrationViewModel.cs" />
     <Compile Include="Models\ResetPasswordViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
+    <Compile Include="Models\TasksViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +150,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Views\User\Registration.cshtml" />
+    <Content Include="Views\Shared\_OrganizeToday.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

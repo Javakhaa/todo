@@ -1,0 +1,212 @@
+﻿
+@{
+    Layout = null;
+}
+
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/OrganizeCss.css" rel="stylesheet" />
+</head>
+
+<body>
+    @{
+        var user = (User)Session["user"];
+    }
+    <div class="navBar2" style="position:absolute">
+
+    </div>
+
+    <div class="navBar1" style="position:absolute">
+
+    </div>
+
+    <div class="logoOrganize" style="position:absolute">
+
+    </div>
+
+    <div class="avatar" style="position:absolute">
+        @user.Username
+    </div>
+
+    <div class="addButton" style="position:absolute">
+
+    </div>
+
+    <div class="search" style="position:absolute">
+
+    </div>
+
+    <div class="searchinput" style="position:absolute">
+        <input style="background:#191D20; border:2px;" type="text" placeholder="Search..">
+    </div>
+
+    <div class="logo" style="position:absolute">
+
+    </div>
+
+    <button id="today-button" class="todayback" style="position:absolute"></button>
+
+    <div class="todayicon" style="position:absolute">
+
+    </div>
+
+    <div class="todaytext" style="position:absolute">
+        <text id="today-text">Today</text>
+    </div>
+
+    <button id="notes-button" class="notesback" style="position:absolute">
+
+    </button>
+
+    <div class="notesicon" style="position:absolute">
+
+    </div>
+
+    <div class="calendarback" style="position:absolute">
+
+    </div>
+
+    <div class="calendaricon" style="position:absolute">
+
+    </div>
+
+    <div class="weatherback" style="position:absolute">
+
+    </div>
+
+    <div class="weathericon" style="position:absolute">
+
+    </div>
+
+    <div class="projectsback" style="position:absolute">
+
+    </div>
+
+    <div class="projecticon" style="position:absolute">
+
+    </div>
+
+    <div class="historyback" style="position:absolute">
+
+    </div>
+
+    <div class="historyicon" style="position:absolute">
+
+    </div>
+
+    <div class="dropdownicon" style="position:absolute">
+
+    </div>
+
+    <div class="time" style="position:absolute">
+        <text>@DateTime.Now.Date</text>
+    </div>
+
+    <div class="location" style="position:absolute">
+        <text>Tbilisi, Georgia</text>
+    </div>
+
+    <div class="date" style="position:absolute">
+        <text>@DateTime.UtcNow.DayOfWeek</text>
+    </div>
+
+    <div class="addproject" style="position:absolute">
+
+    </div>
+
+    <div class="addprojectname" style="position:absolute">
+        <text>Add Project</text>
+    </div>
+
+
+    <div class="notestext" style="position:absolute">
+        <text id="notes-text">Notes</text>
+    </div>
+
+    <div class="calendartext" style="position:absolute">
+        <text>Calendar</text>
+    </div>
+
+    <div class="weathertext" style="position:absolute">
+        <text>Weather</text>
+    </div>
+
+    <div class="historytext" style="position:absolute">
+        <text>History</text>
+    </div>
+
+    <div id="newsbox" class="newsbox" style="position:absolute">
+
+    </div>
+
+    <div class="line1" style="position:absolute">
+
+    </div>
+
+    <div class="line2" style="position:absolute">
+
+    </div>
+
+    <div class="line3" style="position:absolute">
+
+    </div>
+
+    <div class="welcomeText" style="position:absolute">
+        <text>Welcome : </text>
+
+    </div>
+
+    <div class="" style="position:absolute">
+
+    </div>
+
+    <script>
+        initializeNavigationButtonColor();
+
+
+        //today navigaciis buttonis clickze peraddeba es navigaciis buttonis texti
+        // da gadis requestze igebs parshal views da tenis news boxis divshi
+        $("#today-button").click(function () {
+            colorizeNavigationButton("today-text");
+
+            $.get("/Home/OrganizeToday")
+                .then(function (response) {
+                    $("#newsbox").html(response);
+                });
+        });
+
+        $("#notes-button").click(function () {
+            colorizeNavigationButton("notes-text");
+        });
+
+        function initializeNavigationButtonColor() {
+            const navigationTextId = sessionStorage.getItem("navigation-text-id");
+            if (navigationTextId != null) {
+                $(`#${navigationTextId}`).css('color', '#B74A3E');
+            } else {
+                colorizeNavigationButton("today-text");
+            }
+        }
+
+
+        // punqcia romelsac gadaecema textId anu marcxena mxares navigaciis buttonebis text is id.
+        // vamowmeb sessiashi egeti id tu gdia anu aqamde vigacam xo ar daachira navigaciis romelime buttons
+        // tu daachira mashin eg roja unda amovigot default peri mivcet
+        // shemdeg avdget da axali navigaciis textis id chavagdod da eg texti gavawitlot
+        function colorizeNavigationButton(textId) {
+            const navigationButtonId = sessionStorage.getItem("navigation-text-id");
+            if (navigationButtonId != null) {
+                $(`#${navigationButtonId}`).css('color', '#AE9A5B');
+            }
+
+            sessionStorage.setItem("navigation-text-id", textId);
+            $(`#${textId}`).css('color', '#B74A3E');
+        }
+        
+
+    </script>
+
+</body>

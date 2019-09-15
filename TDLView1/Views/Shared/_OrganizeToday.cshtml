@@ -1,0 +1,83 @@
+﻿
+@{
+    Layout = null;
+}
+@model TDLView1.Models.TasksViewModel
+
+<head>
+
+</head>
+
+<body>
+    <div>Today</div>
+    <div id="task-container-id" class="task-container">
+
+        @foreach (var item in Model.Tasks)
+        {
+            var taskRowId = $"task-row-{item.Id}";
+
+            <div id="@taskRowId" class="task-row">
+                <button></button>
+                <div class="task-row-text">@item.Description</div>
+                <button onclick="onTaskDeleteButtonClick(@item.Id)" id="task-delete-button-id">
+                    Delete
+                </button>
+            </div>
+        }
+    </div>
+
+    <input id="add-task-input-id" class="add-task-input" />
+    <button id="add-task-button-id" class="add-task-button">Add Task</button>
+</body>
+
+
+<script>
+
+    //tito task rows HTML is generaciis punqcia romelsac gadaecema taskis id da agwera
+    function getTaskRowHTML(id, description) {
+        return `<div id="task-row-${id}" class="task-row">
+            <button></button>
+            <div class="task-row-text">${description}</div>
+            <button onclick="onTaskDeleteButtonClick(${id})" id="task-delete-button-id">
+                    Delete
+                </button>
+        </div>`;
+    }
+
+    // usmens add task buttonze dacheras da dacheris shemtxvevashi inputidan igebs agweras da post metodit agzavnis serverze
+    // warmetebit dasrulebuli post metods serveridan vatant idis am idis da agweris cvladebit vidzaxebt getTaskRowHTML methods da
+    // migebul htmls vagdebt task container divshi
+    $("#add-task-button-id").click(function () {
+        const taskDescriptionInput = $("#add-task-input-id");
+        const newTaskDescription = taskDescriptionInput.val();
+
+        if (!newTaskDescription)
+            return;
+
+        $.post("AddTask", { Description: newTaskDescription }, function (result) {
+            const taskContainer = $("#task-container-id");
+            console.log(result);
+            taskContainer.append(getTaskRowHTML(result.id, newTaskDescription));
+            taskDescriptionInput.val("");
+        });
+
+    });
+
+
+    // daskis washlis buttonze dacherisas gamosadzaxebeli punqcia romelsac gadaecema id parametrad
+    // es punqcia dizaxebs ajax get calls taskis wasashlelad da tu warmatebit dastrulda am taskis washla
+    // mashin vedzebt am taskis shesabamis divs htmlshi da vshlit mas.
+    function onTaskDeleteButtonClick(id) {
+        $.ajax({
+            url: `DeleteTask/${id}`,
+            type: 'GET',
+            success: function (_) {
+                const toBeRemoveTaskSelector = `#task-row-${id}`;
+                $(toBeRemoveTaskSelector).remove();
+            }
+        });
+    }
+
+
+
+</script>

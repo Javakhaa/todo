@@ -1,0 +1,40 @@
+﻿body {
+}
+
+.task-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.task-row-text {
+    width: 132px;
+    height: 23px;
+    text-align: left;
+    font: Light 20px/23px Gilroy;
+    letter-spacing: 0;
+    color: #989697;
+    opacity: 1;
+}
+
+.add-task-input {
+    width: 554px;
+    height: 46px;
+    background: #111213 0% 0% no-repeat padding-box;
+    border: 1px solid #191D20;
+    opacity: 1;
+}
+
+
+.add-task-button {
+    width: 66px;
+    height: 19px;
+    text-align: left;
+    font: Light 16px/19px Gilroy;
+    letter-spacing: 0;
+    color: #F1F1F1;
+    opacity: 1;
+}
+
+
+.task-container {
+}

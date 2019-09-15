@@ -15,16 +15,17 @@
     opacity: 1;
 }
 .avatar {
-    top: 21px;
+    font-size: xx-large;
+    color: lightgoldenrodyellow;
+    top: 2%;
     left: 1171px;
     width: 36px;
     height: 36px;
-    background: transparent url('/Img/isai-ramos-_3SFFsWqCVg-unsplash.png') 0% 0% no-repeat padding-box;
     opacity: 1;
 }
 .addButton {
-    top: 30px;
-    left: 1112px;
+    top: 3%;
+    left: 44%;
     width: 18px;
     height: 18px;
     background: transparent url('/Img/plus.svg') 0% 0% no-repeat padding-box;
@@ -150,9 +151,7 @@
     border: 1px solid #191D20;
     opacity: 1;
 }
-.projecticon{
 
-}
 .historyback {
     top: 509px;
     left: 152px;
@@ -172,14 +171,15 @@
     opacity: 1;
 }
 .time {
-    top: 137px;
-    left: 1013px;
+    top: 126px;
+    left: 1025px;
     width: 117px;
     height: 34px;
     text-align: left;
     font: Light 30px/34px Gilroy;
+    font-size: larger;
     letter-spacing: 0;
-    color: #BE3434;
+    color: #AE9A5B;
     opacity: 1;
 }
 .location {
@@ -189,40 +189,22 @@
     height: 37px;
     text-align: left;
     font: Light 32px/37px Gilroy;
+    font-size: xx-large;
     letter-spacing: 0;
     color: #ABA9A9;
     opacity: 1;
 }
 .date {
-    top: 201px;
-    left: 632px;
-    width: 185px;
+    top: 14%;
+    left: 49%;
+    width: 50px;
     height: 23px;
     text-align: left;
     font: Light 20px/23px Gilroy;
+    font-size: x-large;
     letter-spacing: 0;
     color: #AE9A5B;
     opacity: 1;
-}
-.temperature {
-    top: 243px;
-    left: 630px;
-    width: 130px;
-    height: 139px;
-    text-align: left;
-    font: Light 120px/139px Gilroy;
-    letter-spacing: 0;
-    color: #AE9A5B;
-    opacity: 1;
-}
-.circle {
-    top: 263px;
-    left: 759px;
-    width: 16px;
-    height: 16px;
-    border: 2px solid #AE9A5B;
-    opacity: 1;
-    border-radius:50px;
 }
 .addproject {
     top: 355px;
@@ -284,7 +266,7 @@
     text-align: left;
     font: Light 22px/25px Gilroy;
     letter-spacing: 0;
-    color: #BE3434;
+    color: #AE9A5B;
     opacity: 1;
 }
 .historytext {
@@ -299,11 +281,46 @@
     opacity: 1;
 }
 .newsbox {
-    top: 250px;
-    left: 700px;
-    width: 400px;
-    height: 600px;
-    transform: matrix(0, 1, -1, 0, 0, 0);
+    top: 24%;
+    left: 28%;
+    width: 42%;
+    height: 50%;
     border: 1px solid #AE9A5B;
+    opacity: 1;
+}
+.line1 {
+    top: 41%;
+    left: 8%;
+    width: 13%;
+    height: 0px;
+    border: 1px solid #ACA9A9;
+    opacity: 1;
+}
+.line2 {
+    top: 45%;
+    left: 8%;
+    width: 13%;
+    height: 0px;
+    border: 1px solid #ACA9A9;
+    opacity: 1;
+}
+.line3 {
+    top: 49%;
+    left: 8%;
+    width: 13%;
+    height: 0px;
+    border: 1px solid #ACA9A9;
+    opacity: 1;
+}
+.welcomeText {
+    top: 3%;
+    left: 55%;
+    width: 88px;
+    height: 25px;
+    text-align: left;
+    font: Light 22px/25px Gilroy;
+    font-size: larger;
+    letter-spacing: 0;
+    color: #AE9A5B;
     opacity: 1;
 }
