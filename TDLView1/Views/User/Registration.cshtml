@@ -3,12 +3,14 @@
 }
 
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - To Do List</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     <link href="~/Content/RegistrationCss.css" rel="stylesheet" />
 
 
@@ -16,81 +18,65 @@
 
 
 <body>
-    
 
-    <div class="container">
-        
+    <div class="logo"></div>
+    <div class="background"></div>
+    <div class="frame">
+        <div class="login-form container col-md-4 ">
+
+            <form action="/Account/Registration" method="post">
+
+                <h2 style="justify-content:center; color:#191D20">Registration</h2>
+
+                <div class=" form-group">
+                    <input class="form-control" name="Name" type="text" placeholder="სახელი" />
+                </div>
+
+                <div class=" form-group">
+                    <input class="form-control" name="LastName" type="text" placeholder="გვარი" />
+                </div>
+
+                <div class=" form-group">
+                    <input class="form-control" name="SurName" type="text" placeholder="ზედმეტსახელი" />
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control" name="Email" type="email" placeholder="ელ-ფოსტა" />
+                </div>
+
+                <div class=" form-group">
+                    <input class="form-control" name="Password" type="password" placeholder="პაროლი" />
+                </div>
+
+                <div class=" form-group">
+                    <input class="form-control" name="RepeatPassword" type="password" placeholder="გაიმეორე პაროლი" />
+                </div>
+
+                <div class="buttons form-group">
+                    <input class="form-control btn btn-warning" value="რეგისტრაცია" type="submit" />
+                </div>
 
 
-        <div class="card bg-light">
-            <article class="card-body mx-auto" style="max-width: 400px;">
-                <h4 class="card-title mt-3 text-center">Create Account</h4>
-                <p class="text-center">Get started with your free account</p>
-                <p>
-                    <a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Login via Twitter</a>
-                    <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
-                </p>
-                <p class="divider-text">
-                    <span class="bg-light">OR</span>
-                </p>
-                <form>
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                        </div>
-                        <input name="" class="form-control" placeholder="Full name" type="text">
-                    </div> <!-- form-group// -->
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
-                        </div>
-                        <input name="" class="form-control" placeholder="Email address" type="email">
-                    </div> <!-- form-group// -->
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-                        </div>
-                        <select class="custom-select" style="max-width: 120px;">
-                            <option selected="">+971</option>
-                            <option value="1">+972</option>
-                            <option value="2">+198</option>
-                            <option value="3">+701</option>
-                        </select>
-                        <input name="" class="form-control" placeholder="Phone number" type="text">
-                    </div> <!-- form-group// -->
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-building"></i> </span>
-                        </div>
-                        <select class="form-control">
-                            <option selected=""> Select job type</option>
-                            <option>Designer</option>
-                            <option>Manager</option>
-                            <option>Accaunting</option>
-                        </select>
-                    </div> <!-- form-group end.// -->
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                        </div>
-                        <input class="form-control" placeholder="Create password" type="password">
-                    </div> <!-- form-group// -->
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                        </div>
-                        <input class="form-control" placeholder="Repeat password" type="password">
-                    </div> <!-- form-group// -->
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
-                    </div> <!-- form-group// -->
-                    <p class="text-center">Have an account? <a href="">Log In</a> </p>
-                </form>
-            </article>
-        </div> <!-- card.// -->
+
+                <p style="color:red; font-size:15px;">@ViewBag.error</p>
+
+
+            </form>
+
+        </div>
     </div>
-    <!--container end.//-->
-    <br><br>
-    
+
+    <div class="login"></div>
+    <div class="logintext"><text>Login</text></div>
+    <div class="text1"><text>Already have an account?</text></div>
+    <div class="text2"><text>Let's log in and manage your day to be more productive.</text></div>
+    <div class=""></div>
+    <div class=""></div>
+    <div class=""></div>
+    <div class=""></div>
+    <div class=""></div>
+    <div class=""></div>
+
+
 
 </body>

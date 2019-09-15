@@ -1,36 +1,121 @@
 ﻿body {
-    background: #191D20;
+    top: 0px;
+    left: 0px;
+    width: 1366px;
+    height: 768px;
+    background: #191D20 0% 0% no-repeat padding-box;
+    opacity: 1;
 }
-.divider-text {
-    position: relative;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
+.logo {
+    top: 36px;
+    left: 151px;
+    width: 149px;
+    height: 95px;
+    background: transparent url('/img/logo1@2x.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position:absolute;
+}
+.frame {
+    top: 116px;
+    left: 230px;
+    width: 500px;
+    height: 480px;
+    border: 3px solid #AE9A5B;
+    opacity: 1;
+    position: absolute;
+}
+.background {
+    top: 146px;
+    left: 183px;
+    width: 1000px;
+    height: 427px;
+    background: #70423D 0% 0% no-repeat padding-box;
+    box-shadow: 10px 10px 10px #000000D6;
+    opacity: 1;
+    position: absolute;
+}
+.login-form {
+    margin-left: 50%;
+    margin-right: 50%;
+    
 }
 
-    .divider-text span {
-        padding: 7px;
-        font-size: 12px;
-        position: relative;
-        z-index: 2;
-    }
-
-    .divider-text:after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        border-bottom: 1px solid #ddd;
-        top: 55%;
-        left: 0;
-        z-index: 1;
-    }
-
-.btn-facebook {
-    background-color: #405D9D;
-    color: #fff;
+.buttons {
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 60%;
 }
 
-.btn-twitter {
-    background-color: #42AEEC;
-    color: #fff;
+.nameicon {
+    top: 253px;
+    left: 336px;
+    width: 18px;
+    height: 18px;
+    background: transparent url('/img/profile.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position:absolute;
+}
+.email {
+    top: 341px;
+    left: 334px;
+    width: 20px;
+    height: 14px;
+    background: transparent url('/img/envelope.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position:absolute;
+}
+.password {
+    top: 427px;
+    left: 332px;
+    width: 22px;
+    height: 10px;
+    transform: matrix(0, 1, -1, 0, 0, 0);
+    background: transparent url('/img/password.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position:absolute;
+}
+.login {
+    top: 414px;
+    left: 788px;
+    width: 112px;
+    height: 44px;
+    border: 2px solid #AE9A5B;
+    opacity: 1;
+    position:absolute;
+}
+.logintext {
+    top: 423px;
+    left: 812px;
+    width: 64px;
+    height: 27px;
+    text-align: left;
+    font: Light 23px/27px Gilroy;
+    letter-spacing: 0;
+    color: #F1F1F1;
+    opacity: 1;
+    position:absolute;
+}
+.text1 {
+    top: 237px;
+    left: 788px;
+    width: 281px;
+    height: 84px;
+    text-align: left;
+    font: Light 36px/42px Gilroy;
+    letter-spacing: 0;
+    color: #D8D7D6;
+    opacity: 1;
+    position:absolute;
+}
+.text2 {
+    top: 333px;
+    left: 788px;
+    width: 321px;
+    height: 56px;
+    text-align: left;
+    font: Light 34px/38px Gilroy;
+    letter-spacing: 0;
+    color: #D8D7D6;
+    opacity: 0.8;
+    position:absolute;
 }
