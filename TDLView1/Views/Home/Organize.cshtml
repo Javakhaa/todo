@@ -31,10 +31,6 @@
         @user.Username
     </div>
 
-    <div class="addButton" style="position:absolute">
-
-    </div>
-
     <div class="search" style="position:absolute">
 
     </div>
@@ -47,22 +43,18 @@
 
     </div>
 
-    <button id="today-button" class="todayback" style="position:absolute"></button>
-
-    <div class="todayicon" style="position:absolute">
-
+    <div id="today-button" class="todayback">
+        <i class="todayicon"></i>
+        <text class="todaytext" id="today-text">Today</text>
     </div>
 
-    <div class="todaytext" style="position:absolute">
-        <text id="today-text">Today</text>
-    </div>
+    
 
-    <button id="notes-button" class="notesback" style="position:absolute">
+    
 
-    </button>
-
-    <div class="notesicon" style="position:absolute">
-
+    <div id="notes-button" class="notesback" style="position:absolute">
+        <i class="notesicon"></i>
+            <text class="notestext" id="notes-text">Notes</text>
     </div>
 
     <div class="calendarback" style="position:absolute">
@@ -93,25 +85,22 @@
 
     </div>
 
-    <div class="historyicon" style="position:absolute">
+    @*<div class="historyicon" style="position:absolute">
 
-    </div>
+    </div>*@
 
     <div class="dropdownicon" style="position:absolute">
 
     </div>
 
     <div class="time" style="position:absolute">
-        <text>@DateTime.Now.Date</text>
+        <text>@DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss")</text>
     </div>
 
     <div class="location" style="position:absolute">
         <text>Tbilisi, Georgia</text>
     </div>
 
-    <div class="date" style="position:absolute">
-        <text>@DateTime.UtcNow.DayOfWeek</text>
-    </div>
 
     <div class="addproject" style="position:absolute">
 
@@ -122,10 +111,6 @@
     </div>
 
 
-    <div class="notestext" style="position:absolute">
-        <text id="notes-text">Notes</text>
-    </div>
-
     <div class="calendartext" style="position:absolute">
         <text>Calendar</text>
     </div>
@@ -135,7 +120,7 @@
     </div>
 
     <div class="historytext" style="position:absolute">
-        <text>History</text>
+        <text>Logout</text>
     </div>
 
     <div id="newsbox" class="newsbox" style="position:absolute">

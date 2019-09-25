@@ -23,16 +23,14 @@
 
     </div>
 
-    <div class="enterMail" style="position:absolute">
 
-    </div>
 
     <div class="startButton" style="position:absolute">
 
     </div>
 
-    <div class="startText" style="position:absolute">
-        <text>Let's start, it’s Free</text>
+    <div id="start-text" class="startText" style="position:absolute">
+        <a class="a" href="http://localhost:52358/User/Registration">Let's start, it’s Free</a>
     </div>
 
     <div class="LoginButton" style="position:absolute">
@@ -40,7 +38,7 @@
     </div>
 
     <div class="loginText" style="position:absolute">
-        <text>Log in</text>
+        <a class="aa" href="http://localhost:52358/User/Login" >Log in</a>
     </div>
 
     <div class="description" style="position:absolute">
@@ -51,25 +49,13 @@
         <a>Let your day cross the limits...</a>
     </div>
 
-    <div class="slideFrame" style="position:absolute">
+    <script>
+        $('#start-text').click(function () {
+            document.location.href = $(this).attr('');
+        });
 
-    </div>
 
-    <div class="slideRight" style="position:absolute">
-
-    </div>
-
-    <div class="slideLeft" style="position:absolute">
-
-    </div>
-
-    <div class="googleIcon" style="position:absolute">
-
-    </div>
-
-    <div class="appleIcon" style="position:absolute">
-
-    </div>
+    </script>
 
 
 </body>

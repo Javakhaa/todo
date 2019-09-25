@@ -15,7 +15,15 @@
     color: #989697;
     opacity: 1;
 }
-
+..add-task-button {
+    position: relative;
+    text-align: center;
+    display: flex;
+    width: 90%;
+    height: 20%;
+    padding-top: 52%;
+    left: 3%;
+}
 .add-task-input {
     width: 554px;
     height: 46px;
@@ -37,4 +45,20 @@
 
 
 .task-container {
+}
+
+.today-text-partial {
+    position: relative;
+    font-size: 200%;
+    text-align: center;
+    color: #ABA9A9;
+}
+.add-task {
+    display: flex;
+    top: 51%;
+    width: 92%;
+    position: r;
+    position: relative;
+    left: 5%;
+    border-radius: 38px;
 }

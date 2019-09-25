@@ -34,14 +34,7 @@
     box-shadow: 10px 10px 10px #131212;
     opacity: 1;
 }
-.enterMail {
-    top: 647px;
-    left: 156px;
-    width: 233px;
-    height: 23px;
-    border: 1px solid #74433D;
-    opacity: 1;
-}
+
 
 .startButton {
     top: 476px;
@@ -50,6 +43,19 @@
     height: 30px;
     background: #C49B05 0% 0% no-repeat padding-box;
     opacity: 1;
+}
+.a {
+    color: white;
+    text-decoration: none;
+
+}
+.aa {
+    color: white;
+    text-decoration: none;
+}
+.a:hover{
+    font-size:60%;
+    transition-duration:2s;
 }
 .startText {
     top: 481px;
@@ -60,6 +66,7 @@
     font: Light 18px/20px Gilroy;
     letter-spacing: 0;
     color: #F1F1F1;
+    text-align: center;
     opacity: 1;
 }
 .loginButton {
@@ -75,11 +82,15 @@
     left: 632px;
     width: 44px;
     height: 19px;
-    text-align: left;
+    text-align: center;
     font: Light 16px/19px Gilroy;
     letter-spacing: 0;
     color: #F1F1F1;
     opacity: 1;
+}
+.loginText:hover {
+    font-size: 60%;
+    transition-duration: 3s;
 }
 .description {
     top: 331px;
@@ -91,6 +102,7 @@
     letter-spacing: 0;
     color: #D8D7D6;
     opacity: 0.8;
+    font-size: large;
 }
 .headerText {
     top: 257px;
@@ -102,6 +114,7 @@
     letter-spacing: 0;
     color: #D8D7D6;
     opacity: 1;
+    font-size: larger;
 }
 .slideFrame {
     top: 365px;

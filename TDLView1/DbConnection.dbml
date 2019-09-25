@@ -1,14 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Todo" Class="DbConnectionDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=Todo;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="TodoConnectionString1" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.Note" Member="Notes">
-    <Type Name="Note">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Description" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="User_Note" Member="User" ThisKey="UserId" OtherKey="ID" Type="User" IsForeignKey="true" />
-    </Type>
-  </Table>
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-QTALG82\SQLEXPRESS;Initial Catalog=Todo;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="TodoConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Project" Member="Projects">
     <Type Name="Project">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -30,6 +21,15 @@
       <Association Name="User_Task" Member="User" ThisKey="UserId" OtherKey="ID" Type="User" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Note" Member="Notes">
+    <Type Name="Note">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="User_Note" Member="User" ThisKey="UserId" OtherKey="ID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.[User]" Member="Users">
     <Type Name="User">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -38,9 +38,9 @@
       <Column Name="Lastname" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="PasswordHash" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
       <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Association Name="User_Note" Member="Notes" ThisKey="ID" OtherKey="UserId" Type="Note" />
       <Association Name="User_Project" Member="Projects" ThisKey="ID" OtherKey="UserId" Type="Project" />
       <Association Name="User_Task" Member="Tasks" ThisKey="ID" OtherKey="UserId" Type="Task" />
+      <Association Name="User_Note" Member="Notes" ThisKey="ID" OtherKey="UserId" Type="Note" />
     </Type>
   </Table>
 </Database>

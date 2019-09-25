@@ -39,8 +39,9 @@
 
 
                 <div class="buttons form-group">
-                    <input class="form-control btn login-button-background" value="Login" type="submit" />
-                </div>
+                        <input class="form-control btn login-button-background" value="Login" type="submit" />
+                    </div>
+
 
 
                 <p style="color:red; font-size:15px;">@ViewBag.error</p>
@@ -50,25 +51,40 @@
         </div>
     </div>
 
-    <div class="signup">
-
-    </div>
-    <div class="signeuptext">
-        <text>Sign Up</text>
-    </div>
+    
     <div class="text1">
         <text>Sign up for free and let you day be more productive.</text>
+    </div>
+
+    <div class="line">
+
     </div>
     <div class="text2">
         <text>Want an account ?</text>
     </div>
-    <div class="forgot">
-        <text>Forgot password ?</text>
-    </div>
-    <div class="login"></div>
-    <div class="logintext1">
-        <text>Login</text>
-    </div>
+    @*<div class="forgot">
+            <text>Forgot password ?</text>
+        </div>*@
+    @*<div class="login"></div>*@
+    @*<div class="logintext1">
+            <text>Login</text>
+        </div>*@
 
+    @*<div class="LoginButton" style="position:absolute">
+
+        </div>
+
+        <div class="loginText" style="position:absolute" value="Login" type="submit">
+            <a><h4>Login</h4></a>
+        </div>*@
+
+
+    @*<div class="start-text-border">
+
+    </div>*@
+
+    <div id="start-text" class="startText" style="position:absolute">
+        <a class="a" href="http://localhost:52358/User/Registration">Sign Up</a>
+    </div>
 
 </body>

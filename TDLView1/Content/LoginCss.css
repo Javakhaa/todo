@@ -22,15 +22,23 @@
     left: 183px;
     width: 1000px;
     height: 400px;*/
-    top: 19%;
-    width: 53%;
-    left: 9%;
-    height: 42%;
+    top: 184px;
+    left: 183px;
+    width: 1000px;
+    height: 400px;
     background: #70423D 0% 0% no-repeat padding-box;
     box-shadow: 10px 10px 10px #000000D6;
     position: absolute;
 }
-
+.line {
+    top: 414px;
+    left: 239px;
+    width: 112px;
+    height: 44px;
+    border: 2px solid #AE9A5B;
+    opacity: 1;
+    position:absolute;
+}
 .frame {
     top: 141px;
     left: 634px;
@@ -143,17 +151,18 @@
     left: 975px;
     width: 64px;
     height: 27px;
-    text-align: left;
     font: Light 23px/27px Gilroy;
     letter-spacing: 0;
     color: #F1F1F1;
     opacity: 1;
     position: absolute;
+    text-align: center;
 }
 
 .login-form {
-    margin-left: 10%;
+    margin-left: 13%;
     margin-right: 10%;
+    top: -1%;
     /*test*/
     flex: 1;
     justify-content: center;
@@ -161,18 +170,111 @@
     display: flex;
 }
 
-input:hover .login-form {
-    color: white;
-}
 
 .buttons {
+    top: 100px;
+    left: 40px;
+    width: 112px;
+    height: 44px;
     float: left;
     margin-left: 15px;
     margin-bottom: 60%;
+    position: relative;
 }
-
+.signeuptext:hover{
+    background-color:black;
+}
 .login-button-background {
     background: #C49B05 0% 0% no-repeat padding-box;
     border-radius: 0px;
     color: white;
+
+}
+.login-button {
+    top: 457px;
+    left: 951px;
+    width: 112px;
+    height: 44px;
+    background-color: red;
+    position: relative;
+}
+.loginButton {
+    top: 457px;
+    left: 951px;
+    width: 112px;
+    height: 44px;
+    text-align:center;
+    border: 1px solid #C49B05;
+    opacity: 1;
+}
+
+.loginText {
+    top: 466px;
+    left: 975px;
+    width: 64px;
+    height: 27px;
+    text-align: center;
+    font: Light 16px/19px Gilroy;
+    letter-spacing: 0;
+    color:white;
+    color: #F1F1F1;
+    opacity: 1;
+}
+.loginText:hover {
+        font-size: 60%;
+        transition-duration: 3s;
+}
+/*h4{
+    color:white;
+    text-decoration:none !important;
+}*/
+.button {
+    top: 457px;
+    left: 951px;
+    width: 112px;
+    height: 44px;
+    background-color: #70423D;
+    border-color: #AE9A5B;
+    border-radius:1px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+}
+.button: hover{
+    font-size: 60%;
+    transition-duration: 2s;
+}
+.a {
+    color: white;
+    text-decoration: none;
+}
+
+.aa {
+    color: white;
+    text-decoration: none;
+}
+
+.a:hover {
+    font-size: 90%;
+    transition-duration: 2s;
+}
+
+.startText {
+    top: 424px;
+    left: 205px;
+    width: 150px;
+    height: 20px;
+    text-align: left;
+    font: Light 18px/20px Gilroy;
+    letter-spacing: 0;
+    color: #F1F1F1;
+    text-align: center;
+    opacity: 1;
+    text-decoration:none;
 }

@@ -5,11 +5,16 @@
 @model TDLView1.Models.TasksViewModel
 
 <head>
-
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/OrganizeCss.css" rel="stylesheet" />
+    <link href="~/Content/OrganizeToday.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div>Today</div>
+    <div class="today-text-partial">Today</div>
     <div id="task-container-id" class="task-container">
 
         @foreach (var item in Model.Tasks)
@@ -17,17 +22,18 @@
             var taskRowId = $"task-row-{item.Id}";
 
             <div id="@taskRowId" class="task-row">
-                <button></button>
+                
                 <div class="task-row-text">@item.Description</div>
-                <button onclick="onTaskDeleteButtonClick(@item.Id)" id="task-delete-button-id">
+                <button class="btn btn-danger" onclick="onTaskDeleteButtonClick(@item.Id)" id="task-delete-button-id">
                     Delete
                 </button>
             </div>
         }
     </div>
-
-    <input id="add-task-input-id" class="add-task-input" />
-    <button id="add-task-button-id" class="add-task-button">Add Task</button>
+    <div class="add-task" ">
+        <input id="add-task-input-id" class="add-task-input" />
+        <button class="btn btn-success" id="add-task-button-id" class="add-task-button">Add Task</button>
+    </div>
 </body>
 
 
@@ -36,9 +42,9 @@
     //tito task rows HTML is generaciis punqcia romelsac gadaecema taskis id da agwera
     function getTaskRowHTML(id, description) {
         return `<div id="task-row-${id}" class="task-row">
-            <button></button>
+            
             <div class="task-row-text">${description}</div>
-            <button onclick="onTaskDeleteButtonClick(${id})" id="task-delete-button-id">
+            <button class="btn btn-danger"  onclick="onTaskDeleteButtonClick(${id})" id="task-delete-button-id">
                     Delete
                 </button>
         </div>`;

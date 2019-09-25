@@ -35,15 +35,15 @@
     position: absolute;
 }
 .login-form {
-    margin-left: 50%;
-    margin-right: 50%;
-    
+    margin-left: 21%;
+    top: 20%;
+    width: 62%;
 }
 
 .buttons {
     float: left;
-    margin-left: 15px;
-    margin-bottom: 60%;
+    margin-left: 1px;
+    margin-bottom: 0%;
 }
 
 .nameicon {
@@ -96,7 +96,8 @@
     position:absolute;
 }
 .text1 {
-    top: 237px;
+    top: 180px;
+    font-size: -webkit-xxx-large;
     left: 788px;
     width: 281px;
     height: 84px;
@@ -105,7 +106,7 @@
     letter-spacing: 0;
     color: #D8D7D6;
     opacity: 1;
-    position:absolute;
+    position: absolute;
 }
 .text2 {
     top: 333px;
@@ -117,5 +118,19 @@
     letter-spacing: 0;
     color: #D8D7D6;
     opacity: 0.8;
-    position:absolute;
+    font-size: large;
+    position: absolute;
+}
+.error {
+    display: flex;
+    width: 64%;
+    top: 50%;
+    height: 12%;
+    margin-left: 21%;
+    margin-top: 21%;
+    text-align: center;
+}
+p {
+    color: red;
+    font-size: large;
 }
