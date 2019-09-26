@@ -247,6 +247,9 @@
     font-size: 110%;
 }
 
+a {
+    text-decoration: none;
+}
 
 .logout {
     top: 509px;
@@ -260,6 +263,7 @@
     position: relative;
     display: inline-block;
     text-align: center;
+    text-decoration: none;
 }
 .logout-icon {
     top: 10px;
@@ -275,6 +279,7 @@
     left: 49px;
     width: 69px;
     height: 25px;
+    text-decoration: none;
     text-align: left;
     font: Light 22px/25px Gilroy;
     letter-spacing: 0;
@@ -282,6 +287,7 @@
     opacity: 1;
     position: absolute;
     cursor: grab;
+
 }
 .logout:hover {
     background-color: #384147;
@@ -289,10 +295,12 @@
     /* HOVER ON */
     -webkit-transition: border-radius 2s;
     font-size: 120%;
+    text-decoration: none;
 }
 
 .logout-text:active {
     font-size: 110%;
+    text-decoration:none;
 }
 .addprojectname:hover {
     border-radius: 2px;
