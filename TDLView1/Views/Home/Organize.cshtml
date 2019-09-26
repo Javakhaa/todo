@@ -71,9 +71,10 @@
 
     <form action="~/Models/"  class="logout" style="position:absolute">
         <i class="logout-icon"></i>
-        <text id="logout" class="logout-text">Logout</text>
-        
-    </form>
+        <a href="../User/Logout" class="logout-text">Logout</a>
+        @*<text id="logout" class="logout-text">Logout</text>*@
+        <p id="output"></p>
+    </div>
 
 
     <div class="dropdownicon" style="position:absolute">
@@ -149,6 +150,16 @@
                 });
         });
 
+        $("#calendar-button").click(function () {
+            colorizeNavigationButton("calendar-text");
+            $("#newsbox").html("");
+        });
+
+        $("#weather-button").click(function () {
+            colorizeNavigationButton("weather-text");
+            $("#newsbox").html("");
+        });
+
         initialize();
 
         function initialize() {
@@ -195,7 +206,7 @@
         }
 
 
-     
+
 
     </script>
 
