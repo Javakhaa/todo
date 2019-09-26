@@ -36,7 +36,7 @@
     </div>
 
     <div class="searchinput" style="position:absolute">
-        <input style="background:#191D20; border:2px;" type="text" placeholder="Search..">
+        <input style="background:#191D20; border:2px;" id="search-input" type="text" placeholder="Search..">
     </div>
 
     <div class="logo" style="position:absolute">
@@ -127,10 +127,11 @@
         //today navigaciis buttonis clickze peraddeba es navigaciis buttonis texti
         // da gadis requestze igebs parshal views da tenis news boxis divshi
         $("#today-button").click(function () {
-            console.log("today button click");
             colorizeNavigationButton("today-text");
+            const valueFromInput = $("#search-input").val();
+            const filterQuery = valueFromInput ? `?searchValue=${valueFromInput}` : "";
 
-            $.get("/Home/OrganizeToday")
+            $.get(`/Home/OrganizeToday/${filterQuery}`)
                 .then(function (response) {
                     $("#newsbox").html(response);
                 });
@@ -166,6 +167,10 @@
                     break;
             }
         }
+
+        $("#search-input").on('input', function (val) {
+            $("#today-button").trigger("click");
+        });
 
 
         // punqcia romelsac gadaecema textId anu marcxena mxares navigaciis buttonebis text is id.

@@ -24,13 +24,13 @@ namespace TDLView1.Controllers
             return View();
         }
 
-        public ActionResult OrganizeToday()
+        public ActionResult OrganizeToday(string searchValue)
         {
             var model = new TasksViewModel();
 
             using (var db = new DbConnectionDataContext())
             {
-                var tasks = db.Tasks.Select(task => new TaskViewModel
+                var tasks = db.Tasks.Where(t => t.Description.ToLower().Contains(string.IsNullOrEmpty(searchValue) ? string.Empty : searchValue)).Select(task => new TaskViewModel
                 {
                     Id = task.ID,
                     Description = task.Description,
