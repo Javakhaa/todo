@@ -150,6 +150,16 @@
                 });
         });
 
+        $("#calendar-button").click(function () {
+            colorizeNavigationButton("calendar-text");
+            $("#newsbox").html("");
+        });
+
+        $("#weather-button").click(function () {
+            colorizeNavigationButton("weather-text");
+            $("#newsbox").html("");
+        });
+
         initialize();
 
         function initialize() {
@@ -196,7 +206,7 @@
         }
 
 
-     
+
 
     </script>
 
