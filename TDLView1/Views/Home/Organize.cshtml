@@ -35,8 +35,8 @@
 
     </div>
 
-    <div class="inp" style="position:absolute">
-        <input style="background:#191D20; border:2px;" type="text" placeholder="Search..❓">
+    <div class="searchinput" style="position:absolute">
+        <input style="background:#191D20; border:2px;" id="search-input" type="text" placeholder="Search..">
     </div>
 
     <div class="logo" style="position:absolute">
@@ -128,10 +128,11 @@
         //today navigaciis buttonis clickze peraddeba es navigaciis buttonis texti
         // da gadis requestze igebs parshal views da tenis news boxis divshi
         $("#today-button").click(function () {
-            console.log("today button click");
             colorizeNavigationButton("today-text");
+            const valueFromInput = $("#search-input").val();
+            const filterQuery = valueFromInput ? `?searchValue=${valueFromInput}` : "";
 
-            $.get("/Home/OrganizeToday")
+            $.get(`/Home/OrganizeToday/${filterQuery}`)
                 .then(function (response) {
                     $("#newsbox").html(response);
                 });
@@ -139,7 +140,13 @@
 
         $("#notes-button").click(function () {
             colorizeNavigationButton("notes-text");
-            $("#newsbox").html("");
+            const valueFromInput = $("#search-input").val();
+            const filterQuery = valueFromInput ? `?searchValue=${valueFromInput}` : "";
+
+            $.get(`/Home/OrganizeNotes/${filterQuery}`)
+                .then(function (response) {
+                    $("#newsbox").html(response);
+                });
         });
 
         initialize();
@@ -167,6 +174,10 @@
                     break;
             }
         }
+
+        $("#search-input").on('input', function (val) {
+            initialize();
+        });
 
 
         // punqcia romelsac gadaecema textId anu marcxena mxares navigaciis buttonebis text is id.

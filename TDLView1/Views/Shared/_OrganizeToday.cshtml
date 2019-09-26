@@ -43,7 +43,7 @@
     //tito task rows HTML is generaciis punqcia romelsac gadaecema taskis id da agwera
     function getTaskRowHTML(id, description) {
         return `<div id="task-row-${id}" class="task-row">
-            <input type="checkbox" class="form-check-input" id="isDoneCheckBoxid" onclick="onTaskEditClick(${id})">
+            <input type="checkbox" class="form-check-input" id="task-isDone-check-box-${id}" onclick="onTaskEditClick(${id})">
             <div class="task-row-text">${description}</div>
             <button class="btn btn-danger"  onclick="onTaskDeleteButtonClick(${id})" id="task-delete-button-id">
                     Delete
