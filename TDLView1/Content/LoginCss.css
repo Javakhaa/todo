@@ -267,7 +267,7 @@
 
 .startText {
     top: 424px;
-    left: 205px;
+    left: 218px;
     width: 150px;
     height: 20px;
     text-align: left;
@@ -276,7 +276,8 @@
     color: #F1F1F1;
     text-align: center;
     opacity: 1;
-    text-decoration:none;
+    font-size:larger;
+    text-decoration: none;
 }
 input, textarea {
     background-color: #70423D;
