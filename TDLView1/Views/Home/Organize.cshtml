@@ -8,6 +8,7 @@
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script>src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js" ></script>
     <link href="~/Content/OrganizeCss.css" rel="stylesheet" />
 </head>
 
@@ -35,8 +36,8 @@
 
     </div>
 
-    <div class="searchinput" style="position:absolute">
-        <input style="background:#191D20; border:2px;" type="text" placeholder="Search..">
+    <div class="inp" style="position:absolute">
+        <input style="background:#191D20; border:2px;" type="text" placeholder="Search..❓">
     </div>
 
     <div class="logo" style="position:absolute">
@@ -59,19 +60,20 @@
 
     <div id="calendar-button" class="calendarback" style="position:absolute">
         <i class="calendaricon"></i>
-        <text class="calendartext" id="calendar-text"></text>
+        <text class="calendartext" id="calendar-text">Calendar</text>
     </div>
 
     <div id="weather-button" class="weatherback" style="position:absolute">
         <i class="weathericon"></i>
-        <text class="weathertext" id="weather-text"></text>
+        <text class="weathertext" id="weather-text">Weather</text>
     </div>
 
     
 
     <div class="logout" style="position:absolute">
         <i class="logout-icon"></i>
-        <text class="logout-text">Logout</text>
+        <text id="logout" class="logout-text">Logout</text>
+        <p id="output"></p>
     </div>
 
 
@@ -80,7 +82,7 @@
     </div>
 
     <div class="time" style="position:absolute">
-        <text>@DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss")</text>
+        <text>@DateTime.Now.ToString("MM/dd/yyyy HH:mm")</text>
     </div>
 
     @*<div class="location" style="position:absolute">
@@ -166,6 +168,26 @@
             $(`#${textId}`).css('color', '#B74A3E');
         }
 
+
+        //session clear
+        $(document).ready(function () {
+            $("#logout").click(function () {
+                console.log("shemovida")
+                $.ajax({
+                    type: "GET",
+                    url: 'logout.php',
+                    data: ({ logout: 1 }),
+                    dataType: "html",
+                    success: function (data) {
+                        $("#output").text(data);
+                        $("#logout").hide();
+                    },
+                    error: function () {
+                        $("#output").text(data);
+                    }
+                });
+            });
+        });
 
     </script>
 
