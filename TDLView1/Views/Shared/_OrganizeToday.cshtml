@@ -20,9 +20,10 @@
         @foreach (var item in Model.Tasks)
         {
             var taskRowId = $"task-row-{item.Id}";
+            var isDoneCheckBoxId = $"task-isDone-check-box-{item.Id}";
 
             <div id="@taskRowId" class="task-row">
-                
+                <input type="checkbox" class="form-check-input" id="@isDoneCheckBoxId" checked="@item.IsDone" onclick="onTaskEditClick(@item.Id)">
                 <div class="task-row-text">@item.Description</div>
                 <button class="btn btn-danger" onclick="onTaskDeleteButtonClick(@item.Id)" id="task-delete-button-id">
                     Delete
@@ -42,7 +43,7 @@
     //tito task rows HTML is generaciis punqcia romelsac gadaecema taskis id da agwera
     function getTaskRowHTML(id, description) {
         return `<div id="task-row-${id}" class="task-row">
-            
+            <input type="checkbox" class="form-check-input" id="isDoneCheckBoxid" onclick="onTaskEditClick(${id})">
             <div class="task-row-text">${description}</div>
             <button class="btn btn-danger"  onclick="onTaskDeleteButtonClick(${id})" id="task-delete-button-id">
                     Delete
@@ -81,6 +82,17 @@
                 const toBeRemoveTaskSelector = `#task-row-${id}`;
                 $(toBeRemoveTaskSelector).remove();
             }
+        });
+    }
+
+    function onTaskEditClick(taskId) {
+        const query = `#task-isDone-check-box-${taskId}`;
+        console.log("onTaskEditClick", query);
+        const value = $(query).is(":checked");
+        console.log("checkbox val", value);
+        console.log("checkbox", $(query));
+        $.post("EditTask", { IsDone: value, TaskId: taskId }, function (result) {
+
         });
     }
 

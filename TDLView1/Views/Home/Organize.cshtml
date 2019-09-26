@@ -68,7 +68,7 @@
         <text class="weathertext" id="weather-text">Weather</text>
     </div>
 
-    
+
 
     <div class="logout" style="position:absolute">
         <i class="logout-icon"></i>
@@ -86,8 +86,8 @@
     </div>
 
     @*<div class="location" style="position:absolute">
-        <text>Tbilisi, Georgia</text>
-    </div>*@
+            <text>Tbilisi, Georgia</text>
+        </div>*@
 
 
     <div class="addproject" style="position:absolute">
@@ -126,12 +126,10 @@
     </div>
 
     <script>
-        initializeNavigationButtonColor();
-
-
         //today navigaciis buttonis clickze peraddeba es navigaciis buttonis texti
         // da gadis requestze igebs parshal views da tenis news boxis divshi
         $("#today-button").click(function () {
+            console.log("today button click");
             colorizeNavigationButton("today-text");
 
             $.get("/Home/OrganizeToday")
@@ -142,14 +140,32 @@
 
         $("#notes-button").click(function () {
             colorizeNavigationButton("notes-text");
+            $("#newsbox").html("");
         });
 
-        function initializeNavigationButtonColor() {
+        initialize();
+
+        function initialize() {
             const navigationTextId = sessionStorage.getItem("navigation-text-id");
             if (navigationTextId != null) {
                 $(`#${navigationTextId}`).css('color', '#B74A3E');
             } else {
                 colorizeNavigationButton("today-text");
+            }
+            console.log("initialize", navigationTextId);
+
+            switch (navigationTextId) {
+                case "today-text":
+                    console.log("inside switch case");
+                    $("#today-button").trigger("click");
+                    break;
+                case "notes-text":
+                    $("#notes-button").trigger("click");
+                    break;
+
+                default:
+                    $("#today-button").trigger("click");
+                    break;
             }
         }
 
