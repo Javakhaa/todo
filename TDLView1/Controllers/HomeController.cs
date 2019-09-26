@@ -66,6 +66,23 @@ namespace TDLView1.Controllers
             return Json(new { id = task.ID });
         }
 
+        [HttpPost]
+        public ActionResult EditTask(EditTaskRequest editTaskRequest)
+        {
+            var user = Session["user"] as User;
+
+            using (var db = new DbConnectionDataContext())
+            {
+                var task = db.Tasks.SingleOrDefault(t => t.ID == editTaskRequest.TaskId);
+
+                task.IsDone = editTaskRequest.IsDone;
+
+                db.SubmitChanges();
+            }
+
+            return new EmptyResult();
+        }
+
         public ActionResult DeleteTask(int id)
         {
             var user = Session["user"] as User;
