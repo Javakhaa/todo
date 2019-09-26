@@ -139,7 +139,13 @@
 
         $("#notes-button").click(function () {
             colorizeNavigationButton("notes-text");
-            $("#newsbox").html("");
+            const valueFromInput = $("#search-input").val();
+            const filterQuery = valueFromInput ? `?searchValue=${valueFromInput}` : "";
+
+            $.get(`/Home/OrganizeNotes/${filterQuery}`)
+                .then(function (response) {
+                    $("#newsbox").html(response);
+                });
         });
 
         initialize();
@@ -169,7 +175,7 @@
         }
 
         $("#search-input").on('input', function (val) {
-            $("#today-button").trigger("click");
+            initialize();
         });
 
 

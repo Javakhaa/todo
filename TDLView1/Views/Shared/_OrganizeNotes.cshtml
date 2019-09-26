@@ -1,0 +1,80 @@
+﻿
+@{
+    Layout = null;
+}
+@model TDLView1.Models.NotesViewModel
+
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/OrganizeCss.css" rel="stylesheet" />
+    <link href="~/Content/OrganizeToday.css" rel="stylesheet" />
+</head>
+
+<body>
+    @*<div class="today-text-partial">Today</div>*@
+    <div id="note-container-id" class="task-container">
+
+        @foreach (var item in Model.Notes)
+        {
+            var noteRowId = $"note-row-{item.Id}";
+            var isDoneCheckBoxId = $"note-isDone-check-box-{item.Id}";
+
+            <div id="@noteRowId" class="note-row">
+                <div class="note-row-text">@item.Description</div>
+                <button class="btn btn-danger" onclick="onNoteDeleteButtonClick(@item.Id)" id="note-delete-button-id">
+                    Delete
+                </button>
+            </div>
+        }
+    </div>
+    <div class="add-task" ">
+        <input id="add-note-input-id" class="add-task-input" />
+        <button class="btn btn-success" id="add-note-button-id" class="add-task-button">Add Note</button>
+    </div>
+</body>
+
+
+<script>
+
+    function getNoteRowHTML(id, description) {
+        return `<div id="note-row-${id}" class="task-row">
+            <div class="note-row-text">${description}</div>
+            <button class="btn btn-danger"  onclick="onNoteDeleteButtonClick(${id})" id="note-delete-button-id">
+                    Delete
+                </button>
+        </div>`;
+    }
+
+    $("#add-note-button-id").click(function () {
+        const noteDescriptionInput = $("#add-note-input-id");
+        const newNoteDescription = noteDescriptionInput.val();
+
+        if (!newNoteDescription)
+            return;
+
+        $.post("AddNote", { Description: newNoteDescription }, function (result) {
+            const noteContainer = $("#note-container-id");
+            console.log(result);
+            noteContainer.append(getNoteRowHTML(result.id, newNoteDescription));
+            noteDescriptionInput.val("");
+        });
+
+    });
+
+
+    function onNoteDeleteButtonClick(id) {
+        $.ajax({
+            url: `DeleteNote/${id}`,
+            type: 'GET',
+            success: function (_) {
+                const toBeRemoveNoteSelector = `#note-row-${id}`;
+                $(toBeRemoveNoteSelector).remove();
+            }
+        });
+    }
+
+
+</script>

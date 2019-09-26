@@ -134,7 +134,8 @@
     <Compile Include="Helper\AccountHelper.cs" />
     <Compile Include="Models\AddNoteRequest.cs" />
     <Compile Include="Models\AddTaskRequest.cs" />
-    <Compile Include="Models\NoteViewModel.cs" />
+    <Compile Include="Models\EditTaskRequest.cs" />
+    <Compile Include="Models\NotesViewModel.cs" />
     <Compile Include="Models\RegistrationViewModel.cs" />
     <Compile Include="Models\ResetPasswordViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
@@ -153,6 +154,7 @@
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Views\User\Registration.cshtml" />
     <Content Include="Views\Shared\_OrganizeToday.cshtml" />
+    <Content Include="Views\Shared\_OrganizeNotes.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -43,6 +43,45 @@ namespace TDLView1.Controllers
             return PartialView("~/Views/Shared/_OrganizeToday.cshtml", model);
         }
 
+        public ActionResult OrganizeNotes(string searchValue)
+        {
+            var model = new NotesViewModel();
+
+            using (var db = new DbConnectionDataContext())
+            {
+                var notes = db.Notes.Where(note => note.Description.ToLower().Contains(string.IsNullOrEmpty(searchValue) ? string.Empty : searchValue)).Select(note => new NoteViewModel
+                {
+                    Id = note.ID,
+                    Description = note.Description,
+                }).ToList();
+
+                model.Notes = notes;
+            }
+
+            return PartialView("~/Views/Shared/_OrganizeNotes.cshtml", model);
+        }
+
+        [HttpPost]
+        public ActionResult AddNote(AddNoteRequest addNoteRequest)
+        {
+            var user = Session["user"] as User;
+            Note note;
+
+            using (var db = new DbConnectionDataContext())
+            {
+                note = new Note
+                {
+                    Description = addNoteRequest.Description,
+                    UserId = user.ID,
+                };
+
+                db.Notes.InsertOnSubmit(note);
+                db.SubmitChanges();
+            }
+
+            return Json(new { id = note.ID });
+        }
+
         [HttpPost]
         public ActionResult AddTask(AddTaskRequest addTaskRequest)
         {
@@ -93,6 +132,22 @@ namespace TDLView1.Controllers
 
 
                 db.Tasks.DeleteOnSubmit(task);
+                db.SubmitChanges();
+            }
+
+            return new EmptyResult();
+        }
+
+        public ActionResult DeleteNote(int id)
+        {
+            var user = Session["user"] as User;
+
+            using (var db = new DbConnectionDataContext())
+            {
+                var note = db.Notes.SingleOrDefault(t => t.ID == id);
+
+
+                db.Notes.DeleteOnSubmit(note);
                 db.SubmitChanges();
             }
 
