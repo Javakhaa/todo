@@ -8,7 +8,6 @@
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
-    <script>src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js" ></script>
     <link href="~/Content/OrganizeCss.css" rel="stylesheet" />
 </head>
 
@@ -185,25 +184,7 @@
         }
 
 
-        //session clear
-        $(document).ready(function () {
-            $("#logout").click(function () {
-                console.log("shemovida")
-                $.ajax({
-                    type: "GET",
-                    url: 'logout.php',
-                    data: ({ logout: 1 }),
-                    dataType: "html",
-                    success: function (data) {
-                        $("#output").text(data);
-                        $("#logout").hide();
-                    },
-                    error: function () {
-                        $("#output").text(data);
-                    }
-                });
-            });
-        });
+     
 
     </script>
 

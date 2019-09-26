@@ -1,21 +1,25 @@
-﻿body {
-}
+﻿/*body {
+}*/
 
 .task-row {
     display: flex;
     flex-direction: row;
+    margin-top: 15;
 }
+    .task-row::after {
+        line-height: inherit;
+    }
 
 .task-row-text {
-    width: 132px;
+    width: 446px;
     height: 23px;
     text-align: left;
     font: Light 20px/23px Gilroy;
     letter-spacing: 0;
-    color: #989697;
+    color: #BE3434;
     opacity: 1;
 }
-..add-task-button {
+.add-task-button {
     position: relative;
     text-align: center;
     display: flex;
@@ -28,8 +32,11 @@
     width: 554px;
     height: 46px;
     background: #111213 0% 0% no-repeat padding-box;
-    border: 1px solid #191D20;
+    border: 1px solid #C49B05;
     opacity: 1;
+    color: #b6ff00;
+    text-align: center;
+    margin-right: 16px;
 }
 
 
@@ -44,8 +51,8 @@
 }
 
 
-.task-container {
-}
+/*.task-container {
+}*/
 
 /*.today-text-partial {
     position: relative;
@@ -55,10 +62,24 @@
 }*/
 .add-task {
     display: flex;
-    top: 51%;
+    top: 2%;
     width: 92%;
-    position: r;
+    margin-top: 12px;
     position: relative;
     left: 5%;
     border-radius: 38px;
+}
+.task-container {
+    margin-top: 4%;
+    margin-left: 10%;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+}
+.form-check-input {
+    margin-right: 11px;
+    margin-top: 5px;
+}
+input[type="checkbox"] {
+    margin-right: 9px;
 }
