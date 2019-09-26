@@ -10,12 +10,12 @@
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <link href="~/Content/OrganizeCss.css" rel="stylesheet" />
-    <link href="~/Content/OrganizeToday.css" rel="stylesheet" />
+    <link href="~/Content/OrganizeNote.css" rel="stylesheet" />
 </head>
 
 <body>
     @*<div class="today-text-partial">Today</div>*@
-    <div id="note-container-id" class="task-container">
+    <div id="note-container-id" class="note-container">
 
         @foreach (var item in Model.Notes)
         {
@@ -24,15 +24,15 @@
 
             <div id="@noteRowId" class="note-row">
                 <div class="note-row-text">@item.Description</div>
-                <button class="btn btn-danger" onclick="onNoteDeleteButtonClick(@item.Id)" id="note-delete-button-id">
+                <button class="btn btn-danger add-task-button" onclick="onNoteDeleteButtonClick(@item.Id)" id="note-delete-button-id">
                     Delete
                 </button>
             </div>
         }
     </div>
-    <div class="add-task" ">
-        <input id="add-note-input-id" class="add-task-input" />
-        <button class="btn btn-success" id="add-note-button-id" class="add-task-button">Add Note</button>
+    <div class="add-note" ">
+        <input id="add-note-input-id" class="add-note-input" />
+        <button class="btn btn-success" id="add-note-button-id" class="add-note-button">Add Note</button>
     </div>
 </body>
 
@@ -40,7 +40,7 @@
 <script>
 
     function getNoteRowHTML(id, description) {
-        return `<div id="note-row-${id}" class="task-row">
+        return `<div id="note-row-${id}" class="note-row">
             <div class="note-row-text">${description}</div>
             <button class="btn btn-danger"  onclick="onNoteDeleteButtonClick(${id})" id="note-delete-button-id">
                     Delete

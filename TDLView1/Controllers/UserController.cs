@@ -104,6 +104,7 @@ namespace TDLView1.Controllers
 
         public ActionResult Logout()
         {
+            Session.Abandon();
             Session.Clear();
             return RedirectToAction("Login");
         }
