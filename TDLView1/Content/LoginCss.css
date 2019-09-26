@@ -185,10 +185,10 @@
     background-color:black;
 }
 .login-button-background {
-    background: #C49B05 0% 0% no-repeat padding-box;
-    border-radius: 0px;
+    background: #70423D 0% 0% no-repeat padding-box;
+    border-radius: 1px;
+    border-color: #AE9A5B;
     color: white;
-
 }
 .login-button {
     top: 457px;
@@ -277,4 +277,22 @@
     text-align: center;
     opacity: 1;
     text-decoration:none;
+}
+input, textarea {
+    background-color: #70423D;
+}
+.inp {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #03a8f45e;
+    padding: 5px 15px;
+    outline: none;
+    
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+    transition: text-indent 0.4s 0.4s ease;
+    text-indent: -100%;
+    opacity: 1;
 }

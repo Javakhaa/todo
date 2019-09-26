@@ -96,12 +96,14 @@
     color: #AE9A5B;
     opacity: 1;
     position: absolute;
+    cursor: grab;
 }
 .todayback:hover {
-    background-color: #ABA9A9;
+    background-color: #384147;
     border-radius: 2px;
     /* HOVER ON */
     -webkit-transition: border-radius 2s;
+    font-size: 120%;
 }
 .todaytext:active{
     font-size:150%;
@@ -138,12 +140,14 @@
     color: #AE9A5B;
     opacity: 1;
     position: absolute;
+    cursor: grab;
 }
 .notesback:hover {
-    background-color: #ABA9A9;
+    background-color: #384147;
     border-radius: 2px;
     /* HOVER ON */
     -webkit-transition: border-radius 2s;
+    font-size: 120%;
 }
 
 .notestext:active {
@@ -158,14 +162,42 @@
     box-shadow: 3px 3px 3px #0000009C;
     border: 1px solid #191D20;
     opacity: 1;
+    position: relative;
+    display: inline-block;
+    text-align: center;
 }
 .calendaricon {
-    top: 243px;
-    left: 167px;
-    width: 26px;
-    height: 24px;
+    top: 28%;
+    left: 4%;
+    width: 47px;
+    height: 40px;
     background: transparent url('/Img/calendar.svg') 0% 0% no-repeat padding-box;
     opacity: 1;
+    position: absolute;
+}
+.calendartext {
+    top: 30%;
+    left: 18%;
+    width: 13%;
+    height: 25px;
+    text-align: center;
+    font: Light 22px/25px Gilroy;
+    letter-spacing: 0;
+    color: #AE9A5B;
+    opacity: 1;
+    cursor: grab;
+    position:absolute;
+}
+.calendarback:hover {
+    background-color: #384147;
+    border-radius: 2px;
+    /* HOVER ON */
+    -webkit-transition: border-radius 2s;
+    font-size: 120%;
+}
+
+.calendartext:active {
+    font-size: 150%;
 }
 .weatherback {
     top: 285px;
@@ -176,27 +208,46 @@
     box-shadow: 3px 3px 3px #0000009C;
     border: 1px solid #191D20;
     opacity: 1;
+    position: relative;
+    display: inline-block;
+    text-align: center;
 }
 .weathericon {
-    top: 298px;
-    left: 164px;
+    top: 31%;
+    left: 4%;
     width: 32px;
-    height: 21px;
+    height: 23px;
     background: transparent url('/Img/cloud.svg') 0% 0% no-repeat padding-box;
     opacity: 1;
+    position: absolute;
 }
-.projectback {
-    top: 340px;
-    left: 152px;
-    width: 288px;
-    height: 46px;
-    background: #191D20 0% 0% no-repeat padding-box;
-    box-shadow: 3px 3px 3px #0000009C;
-    border: 1px solid #191D20;
+.weathertext {
+    top: 10px;
+    left: 65px;
+    width: 88px;
+    height: 25px;
+    text-align: left;
+    font: Light 22px/25px Gilroy;
+    letter-spacing: 0;
+    color: #AE9A5B;
     opacity: 1;
+    cursor: grab;
+    position: absolute;
+}
+.weatherback:hover {
+    background-color: #384147;
+    border-radius: 2px;
+    /* HOVER ON */
+    -webkit-transition: border-radius 2s;
+    font-size: 120%;
 }
 
-.historyback {
+.weathertext:active {
+    font-size: 150%;
+}
+
+
+.logout {
     top: 509px;
     left: 152px;
     width: 288px;
@@ -205,19 +256,56 @@
     box-shadow: 3px 3px 3px #0000009C;
     border: 1px solid #191D20;
     opacity: 1;
+    position: relative;
+    display: inline-block;
+    text-align: center;
 }
-.historyicon {
-    top: 519px;
-    left: 165px;
-    width: 30px;
-    height: 27px;
-    background: transparent url('/Img/history.svg') 0% 0% no-repeat padding-box;
+.logout-icon {
+    top: 17px;
+    left: 17px;
+    width: 70px;
+    height: 71px;
+    background: transparent url('/img/logout-sketch.png') 0% 0% no-repeat padding-box;
     opacity: 1;
+    position: absolute;
 }
+.logout-text {
+    top: 12px;
+    left: 49px;
+    width: 69px;
+    height: 25px;
+    text-align: left;
+    font: Light 22px/25px Gilroy;
+    letter-spacing: 0;
+    color: #AE9A5B;
+    opacity: 1;
+    position: absolute;
+    cursor: grab;
+}
+.logout:hover {
+    background-color: #384147;
+    border-radius: 2px;
+    /* HOVER ON */
+    -webkit-transition: border-radius 2s;
+    font-size: 120%;
+}
+
+.logout-text:active {
+    font-size: 150%;
+}
+.addprojectname:hover {
+    border-radius: 2px;
+    /* HOVER ON */
+    -webkit-transition: border-radius 2s;
+    font-size: 120%;
+    cursor: grab;
+}
+
+
 .time {
-    top: 126px;
-    left: 1025px;
-    width: 117px;
+    top: 107px;
+    left: 700px;
+    width: 308px;
     height: 34px;
     text-align: left;
     font: Light 30px/34px Gilroy;
@@ -226,7 +314,7 @@
     color: #AE9A5B;
     opacity: 1;
 }
-.location {
+/*.location {
     top: 132px;
     left: 630px;
     width: 224px;
@@ -237,7 +325,7 @@
     letter-spacing: 0;
     color: #ABA9A9;
     opacity: 1;
-}
+}*/
 .date {
     top: 14%;
     left: 49%;
@@ -269,28 +357,8 @@
     color: #989697;
     opacity: 1;
 }
-.calendartext {
-    top: 247px;
-    left: 206px;
-    width: 96px;
-    height: 25px;
-    text-align: left;
-    font: Light 22px/25px Gilroy;
-    letter-spacing: 0;
-    color: #AE9A5B;
-    opacity: 1;
-}
-.weathertext {
-    top: 299px;
-    left: 206px;
-    width: 88px;
-    height: 25px;
-    text-align: left;
-    font: Light 22px/25px Gilroy;
-    letter-spacing: 0;
-    color: #AE9A5B;
-    opacity: 1;
-}
+
+
 .historytext {
     top: 520px;
     left: 206px;

@@ -47,12 +47,12 @@
 .task-container {
 }
 
-.today-text-partial {
+/*.today-text-partial {
     position: relative;
     font-size: 200%;
     text-align: center;
     color: #ABA9A9;
-}
+}*/
 .add-task {
     display: flex;
     top: 51%;

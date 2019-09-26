@@ -132,7 +132,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\AccountHelper.cs" />
+    <Compile Include="Models\AddNoteRequest.cs" />
     <Compile Include="Models\AddTaskRequest.cs" />
+    <Compile Include="Models\NoteViewModel.cs" />
     <Compile Include="Models\RegistrationViewModel.cs" />
     <Compile Include="Models\ResetPasswordViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />

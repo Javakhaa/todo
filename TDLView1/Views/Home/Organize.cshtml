@@ -48,46 +48,32 @@
         <text class="todaytext" id="today-text">Today</text>
     </div>
 
-    
 
-    
+
+
 
     <div id="notes-button" class="notesback" style="position:absolute">
         <i class="notesicon"></i>
-            <text class="notestext" id="notes-text">Notes</text>
+        <text class="notestext" id="notes-text">Notes</text>
     </div>
 
-    <div class="calendarback" style="position:absolute">
-
+    <div id="calendar-button" class="calendarback" style="position:absolute">
+        <i class="calendaricon"></i>
+        <text class="calendartext" id="calendar-text"></text>
     </div>
 
-    <div class="calendaricon" style="position:absolute">
-
+    <div id="weather-button" class="weatherback" style="position:absolute">
+        <i class="weathericon"></i>
+        <text class="weathertext" id="weather-text"></text>
     </div>
 
-    <div class="weatherback" style="position:absolute">
+    
 
+    <div class="logout" style="position:absolute">
+        <i class="logout-icon"></i>
+        <text class="logout-text">Logout</text>
     </div>
 
-    <div class="weathericon" style="position:absolute">
-
-    </div>
-
-    <div class="projectsback" style="position:absolute">
-
-    </div>
-
-    <div class="projecticon" style="position:absolute">
-
-    </div>
-
-    <div class="historyback" style="position:absolute">
-
-    </div>
-
-    @*<div class="historyicon" style="position:absolute">
-
-    </div>*@
 
     <div class="dropdownicon" style="position:absolute">
 
@@ -97,9 +83,9 @@
         <text>@DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss")</text>
     </div>
 
-    <div class="location" style="position:absolute">
+    @*<div class="location" style="position:absolute">
         <text>Tbilisi, Georgia</text>
-    </div>
+    </div>*@
 
 
     <div class="addproject" style="position:absolute">
@@ -111,17 +97,6 @@
     </div>
 
 
-    <div class="calendartext" style="position:absolute">
-        <text>Calendar</text>
-    </div>
-
-    <div class="weathertext" style="position:absolute">
-        <text>Weather</text>
-    </div>
-
-    <div class="historytext" style="position:absolute">
-        <text>Logout</text>
-    </div>
 
     <div id="newsbox" class="newsbox" style="position:absolute">
 
@@ -190,7 +165,7 @@
             sessionStorage.setItem("navigation-text-id", textId);
             $(`#${textId}`).css('color', '#B74A3E');
         }
-        
+
 
     </script>
 
